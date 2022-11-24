@@ -80,3 +80,7 @@ C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebA
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\obj\Debug\net6.0\HotelComercy_WebAPI.pdb
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\obj\Debug\net6.0\HotelComercy_WebAPI.genruntimeconfig.cache
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\obj\Debug\net6.0\ref\HotelComercy_WebAPI.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll

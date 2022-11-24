@@ -9,5 +9,7 @@ namespace HotelComercy_WebAPI.Model
         [MaxLength(30, ErrorMessage = "O campo {0} deve ter no max {1} caracteres.")]
         public string Name { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public int Occupancy { get; set; }
+        public int Sqtf { get; set; }
     }
 }
