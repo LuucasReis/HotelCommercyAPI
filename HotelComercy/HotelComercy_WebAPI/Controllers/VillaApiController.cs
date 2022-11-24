@@ -1,5 +1,4 @@
-﻿using HotelComercy_WebAPI.Logging;
-using HotelComercy_WebAPI.Model;
+﻿using HotelComercy_WebAPI.Model;
 using HotelComercy_WebAPI.Model.Dto;
 using HotelComercy_WebAPI.Repository.IRepository;
 using Microsoft.AspNetCore.Http;

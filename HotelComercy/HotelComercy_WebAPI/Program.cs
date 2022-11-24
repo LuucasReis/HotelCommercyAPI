@@ -1,4 +1,5 @@
 using HotelComercy_WebAPI.Data;
+using HotelComercy_WebAPI.Data.SeedingService;
 using HotelComercy_WebAPI.Repository;
 using HotelComercy_WebAPI.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
@@ -21,10 +22,14 @@ builder.Services.AddDbContext<ApiVillaContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
 //Add Simple log
 Log.Logger = new LoggerConfiguration().MinimumLevel.Debug()
-    .WriteTo.File("/log/villaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();
+    .WriteTo.File("log/villaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();
+
 builder.Host.UseSerilog();
 //Add UnitOfWork
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+//Add SeedingService
+builder.Services.AddScoped<ISeedingService, SeedingService>();
 
 var app = builder.Build();
 
@@ -36,9 +41,18 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+SeedDatabase();
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var seedingService = scope.ServiceProvider.GetRequiredService<ISeedingService>();
+        seedingService.Seed();
+    }
+}
