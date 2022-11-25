@@ -1770,3 +1770,1107 @@ FROM [Villas] AS [v]
 2022-11-25 10:33:55.329 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
 2022-11-25 10:33:55.329 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
 2022-11-25 10:33:55.330 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi - - - 200 1631 application/json;+charset=utf-8 13.9602ms
+2022-11-25 11:13:54.715 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2022-11-25 11:13:55.267 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:13:55.291 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:13:55.335 -03:00 [DBG] Created DbConnection. (42ms).
+2022-11-25 11:13:55.342 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.640 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.647 -03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2022-11-25 11:13:56.653 -03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (5ms).
+2022-11-25 11:13:56.655 -03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (10ms).
+2022-11-25 11:13:56.660 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-25 11:13:56.688 -03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-25 11:13:56.690 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.700 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (6ms).
+2022-11-25 11:13:56.703 -03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2022-11-25 11:13:56.703 -03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2022-11-25 11:13:56.703 -03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2022-11-25 11:13:56.703 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.704 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.705 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-11-25 11:13:56.722 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-11-25 11:13:56.723 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.723 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:13:56.747 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:13:56.747 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:13:56.747 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:13:56.747 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.747 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.747 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-11-25 11:13:56.750 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-11-25 11:13:56.754 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.755 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 3ms reading results.
+2022-11-25 11:13:56.755 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:56.755 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:13:56.796 -03:00 [DBG] Compiling query expression: 
+'DbSet<Villa>()
+    .Any()'
+2022-11-25 11:13:56.990 -03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Villas AS v)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    HotelComercy_WebAPI.Data.ApiVillaContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2022-11-25 11:13:57.019 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:13:57.019 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:13:57.019 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:13:57.019 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:57.019 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:57.019 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Villas] AS [v]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-11-25 11:13:57.020 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Villas] AS [v]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-11-25 11:13:57.022 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:57.022 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 1ms reading results.
+2022-11-25 11:13:57.022 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:57.022 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:13:57.024 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:13:57.026 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:13:57.027 -03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2022-11-25 11:13:57.098 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-11-25 11:13:57.126 -03:00 [DBG] Hosting starting
+2022-11-25 11:13:57.177 -03:00 [DBG] Loaded hosting startup assembly HotelComercy_WebAPI
+2022-11-25 11:13:57.177 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-11-25 11:13:57.178 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-11-25 11:13:57.180 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-25 11:13:57.181 -03:00 [INF] Hosting environment: Development
+2022-11-25 11:13:57.181 -03:00 [INF] Content root path: C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\
+2022-11-25 11:13:57.181 -03:00 [DBG] Hosting started
+2022-11-25 11:13:57.211 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/swagger/index.html - -
+2022-11-25 11:13:57.233 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-11-25 11:13:57.245 -03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2022-11-25 11:13:57.246 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 11:13:57.389 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2022-11-25 11:13:57.508 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2022-11-25 11:13:57.515 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/_vs/browserLink - -
+2022-11-25 11:13:57.515 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - -
+2022-11-25 11:13:57.523 -03:00 [DBG] Connection ID "18014398532567433315" disconnecting.
+2022-11-25 11:13:57.525 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/swagger/index.html - - - 200 - text/html;charset=utf-8 315.8666ms
+2022-11-25 11:13:57.539 -03:00 [DBG] Connection ID "18086456126605361215" disconnecting.
+2022-11-25 11:13:57.540 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 21.0295ms
+2022-11-25 11:13:57.569 -03:00 [DBG] Connection ID "18158513707758387331" disconnecting.
+2022-11-25 11:13:57.571 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.6865ms
+2022-11-25 11:13:57.650 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - -
+2022-11-25 11:13:57.650 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2022-11-25 11:13:57.650 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 11:13:57.787 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.5865ms
+2022-11-25 11:13:57.787 -03:00 [DBG] Connection ID "18302628887244308616" disconnecting.
+2022-11-25 11:14:00.420 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/VillaApi - -
+2022-11-25 11:14:00.427 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi'
+2022-11-25 11:14:00.432 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI)' with route pattern 'api/VillaApi' is valid for the request path '/api/VillaApi'
+2022-11-25 11:14:00.432 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI)'
+2022-11-25 11:14:00.434 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:14:00.437 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI)'
+2022-11-25 11:14:00.462 -03:00 [INF] Route matched with {action = "GetVillas", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] GetVillas() on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:14:00.463 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:14:00.463 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:14:00.464 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:14:00.464 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:14:00.464 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:14:00.464 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:14:00.474 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:14:00.595 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:14:00.598 -03:00 [INF] Retornando todas as vilas.
+2022-11-25 11:14:00.622 -03:00 [DBG] Compiling query expression: 
+'DbSet<Villa>()
+    .AsNoTracking()'
+2022-11-25 11:14:00.681 -03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Villa>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Villa.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Villa.Amenity (string) Required, 1], [Property: Villa.CreatedDate (DateTime) Required, 2], [Property: Villa.Details (string) Required, 3], [Property: Villa.ImageUrl (string) Required, 4], [Property: Villa.Name (string) Required MaxLength(30), 5], [Property: Villa.Occupancy (int) Required, 6], [Property: Villa.Rate (double) Required, 7], [Property: Villa.Sqtf (int) Required, 8], [Property: Villa.UpdatedDate (DateTime) Required, 9] }
+        SELECT v.Id, v.Amenity, v.CreatedDate, v.Details, v.ImageUrl, v.Name, v.Occupancy, v.Rate, v.Sqtf, v.UpdatedDate
+        FROM Villas AS v), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Villa>, 
+    HotelComercy_WebAPI.Data.ApiVillaContext, 
+    False, 
+    False, 
+    True
+)'
+2022-11-25 11:14:00.716 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:14:00.716 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:14:00.716 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:14:00.716 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:14:00.716 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:14:00.723 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:00.729 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:00.730 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+2022-11-25 11:14:00.764 -03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+2022-11-25 11:14:00.794 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:00.794 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 29ms reading results.
+2022-11-25 11:14:00.799 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:00.800 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:14:00.830 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:14:00.834 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:14:00.834 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:14:00.834 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:14:00.834 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:14:00.835 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:14:00.835 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:14:00.990 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI) in 518.6919ms
+2022-11-25 11:14:00.991 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI)'
+2022-11-25 11:14:00.992 -03:00 [DBG] Connection ID "18302628887244308618" disconnecting.
+2022-11-25 11:14:00.996 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:14:01.004 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:01.006 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:14:01.006 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi - - - 200 1696 application/json;+charset=utf-8 586.4500ms
+2022-11-25 11:14:20.787 -03:00 [INF] Request starting HTTP/2 POST https://localhost:44359/api/VillaApi application/json-patch+json 136
+2022-11-25 11:14:20.818 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi'
+2022-11-25 11:14:20.819 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.CreateVilla (HotelComercy_WebAPI)' with route pattern 'api/VillaApi' is valid for the request path '/api/VillaApi'
+2022-11-25 11:14:20.819 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.CreateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:14:20.820 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:14:20.820 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.CreateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:14:20.842 -03:00 [INF] Route matched with {action = "CreateVilla", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] CreateVilla(HotelComercy_WebAPI.Model.Dto.VillaCreateDTO) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:14:20.842 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:14:20.842 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:14:20.842 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:14:20.842 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:14:20.842 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:14:20.842 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:14:20.890 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:14:20.890 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:14:20.914 -03:00 [DBG] Attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaCreateDTO' ...
+2022-11-25 11:14:20.917 -03:00 [DBG] Attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaCreateDTO' using the name '' in request data ...
+2022-11-25 11:14:20.917 -03:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:14:20.918 -03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:14:20.991 -03:00 [DBG] Done attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaCreateDTO'.
+2022-11-25 11:14:20.992 -03:00 [DBG] Done attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaCreateDTO'.
+2022-11-25 11:14:20.992 -03:00 [DBG] Attempting to validate the bound parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaCreateDTO' ...
+2022-11-25 11:14:21.003 -03:00 [DBG] Done attempting to validate the bound parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaCreateDTO'.
+2022-11-25 11:14:21.015 -03:00 [DBG] Compiling query expression: 
+'DbSet<Villa>()
+    .Where(x => x.Name == __villaDTO_Name_0)
+    .FirstOrDefault()'
+2022-11-25 11:14:21.112 -03:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Villa>(
+    asyncEnumerable: new SingleQueryingEnumerable<Villa>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Villa.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Villa.Amenity (string) Required, 1], [Property: Villa.CreatedDate (DateTime) Required, 2], [Property: Villa.Details (string) Required, 3], [Property: Villa.ImageUrl (string) Required, 4], [Property: Villa.Name (string) Required MaxLength(30), 5], [Property: Villa.Occupancy (int) Required, 6], [Property: Villa.Rate (double) Required, 7], [Property: Villa.Sqtf (int) Required, 8], [Property: Villa.UpdatedDate (DateTime) Required, 9] }
+            SELECT TOP(1) v.Id, v.Amenity, v.CreatedDate, v.Details, v.ImageUrl, v.Name, v.Occupancy, v.Rate, v.Sqtf, v.UpdatedDate
+            FROM Villas AS v
+            WHERE v.Name == @__villaDTO_Name_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Villa>, 
+        HotelComercy_WebAPI.Data.ApiVillaContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2022-11-25 11:14:21.137 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:14:21.137 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:14:21.137 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:14:21.137 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:14:21.146 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (9ms).
+2022-11-25 11:14:21.146 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.146 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.159 -03:00 [DBG] Executing DbCommand [Parameters=[@__villaDTO_Name_0='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Name] = @__villaDTO_Name_0
+2022-11-25 11:14:21.215 -03:00 [INF] Executed DbCommand (69ms) [Parameters=[@__villaDTO_Name_0='?' (Size = 30)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Name] = @__villaDTO_Name_0
+2022-11-25 11:14:21.216 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.218 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 2ms reading results.
+2022-11-25 11:14:21.218 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.218 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:14:21.273 -03:00 [DBG] 'ApiVillaContext' generated a temporary value for the property 'Id.Villa'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:14:21.339 -03:00 [DBG] Context 'ApiVillaContext' started tracking 'Villa' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:14:21.351 -03:00 [DBG] SaveChanges starting for 'ApiVillaContext'.
+2022-11-25 11:14:21.357 -03:00 [DBG] DetectChanges starting for 'ApiVillaContext'.
+2022-11-25 11:14:21.386 -03:00 [DBG] DetectChanges completed for 'ApiVillaContext'.
+2022-11-25 11:14:21.508 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.509 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.514 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:14:21.514 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:14:21.515 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:14:21.516 -03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 30), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Villas] ([Amenity], [CreatedDate], [Details], [ImageUrl], [Name], [Occupancy], [Rate], [Sqtf], [UpdatedDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2022-11-25 11:14:21.530 -03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 30), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Villas] ([Amenity], [CreatedDate], [Details], [ImageUrl], [Name], [Occupancy], [Rate], [Sqtf], [UpdatedDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2022-11-25 11:14:21.546 -03:00 [DBG] The foreign key property 'Villa.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2022-11-25 11:14:21.555 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.555 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 24ms reading results.
+2022-11-25 11:14:21.556 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.556 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:14:21.569 -03:00 [DBG] An entity of type 'Villa' tracked by 'ApiVillaContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:14:21.572 -03:00 [DBG] SaveChanges completed for 'ApiVillaContext' with 1 entities written to the database.
+2022-11-25 11:14:21.574 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:14:21.575 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:14:21.575 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:14:21.575 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:14:21.575 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:14:21.575 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:14:21.575 -03:00 [INF] Executing CreatedAtRouteResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:14:21.602 -03:00 [DBG] Found the endpoints ["HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)"] for address Microsoft.AspNetCore.Routing.RouteValuesAddress
+2022-11-25 11:14:21.621 -03:00 [DBG] Successfully processed template api/VillaApi/{id:int} for HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI) resulting in /api/VillaApi/14 and 
+2022-11-25 11:14:21.622 -03:00 [DBG] Link generation succeeded for endpoints ["HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)"] with result /api/VillaApi/14
+2022-11-25 11:14:21.623 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.CreateVilla (HotelComercy_WebAPI) in 780.9017ms
+2022-11-25 11:14:21.623 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.CreateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:14:21.623 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:14:21.623 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:21.623 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:14:21.623 -03:00 [DBG] Connection ID "17798225759043584080" disconnecting.
+2022-11-25 11:14:21.623 -03:00 [INF] Request finished HTTP/2 POST https://localhost:44359/api/VillaApi application/json-patch+json 136 - 201 182 application/json;+charset=utf-8 837.5278ms
+2022-11-25 11:14:35.723 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/VillaApi/14 - -
+2022-11-25 11:14:35.723 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:14:35.723 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:14:35.724 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:14:35.724 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:14:35.724 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:14:35.727 -03:00 [INF] Route matched with {action = "GetById", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] GetById(Int32) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:14:35.727 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:14:35.727 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:14:35.727 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:14:35.727 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:14:35.728 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:14:35.728 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:14:35.731 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:14:35.732 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:14:35.732 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:14:35.733 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:14:35.735 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:14:35.735 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:14:35.735 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:14:35.735 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:14:35.738 -03:00 [DBG] Compiling query expression: 
+'DbSet<Villa>()
+    .AsNoTracking()
+    .Where(x => x.Id == __id_0)
+    .FirstOrDefault()'
+2022-11-25 11:14:35.742 -03:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Villa>(
+    asyncEnumerable: new SingleQueryingEnumerable<Villa>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Villa.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Villa.Amenity (string) Required, 1], [Property: Villa.CreatedDate (DateTime) Required, 2], [Property: Villa.Details (string) Required, 3], [Property: Villa.ImageUrl (string) Required, 4], [Property: Villa.Name (string) Required MaxLength(30), 5], [Property: Villa.Occupancy (int) Required, 6], [Property: Villa.Rate (double) Required, 7], [Property: Villa.Sqtf (int) Required, 8], [Property: Villa.UpdatedDate (DateTime) Required, 9] }
+            SELECT TOP(1) v.Id, v.Amenity, v.CreatedDate, v.Details, v.ImageUrl, v.Name, v.Occupancy, v.Rate, v.Sqtf, v.UpdatedDate
+            FROM Villas AS v
+            WHERE v.Id == @__id_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Villa>, 
+        HotelComercy_WebAPI.Data.ApiVillaContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2022-11-25 11:14:35.743 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:14:35.743 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:14:35.743 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:14:35.743 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:14:35.743 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:14:35.743 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:35.743 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:35.743 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:14:35.747 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:14:35.747 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:35.747 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 0ms reading results.
+2022-11-25 11:14:35.747 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:35.747 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:14:35.748 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:14:35.748 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:14:35.748 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:14:35.748 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:14:35.748 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:14:35.748 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:14:35.748 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:14:35.748 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI) in 20.6646ms
+2022-11-25 11:14:35.748 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:14:35.748 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:14:35.748 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:14:35.748 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:14:35.748 -03:00 [DBG] Connection ID "17798225759043584082" disconnecting.
+2022-11-25 11:14:35.749 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi/14 - - - 200 182 application/json;+charset=utf-8 25.2975ms
+2022-11-25 11:14:53.453 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44359/api/VillaApi/14 application/json-patch+json 146
+2022-11-25 11:14:53.453 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:14:53.453 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:14:53.453 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:14:53.453 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:14:53.453 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:14:53.456 -03:00 [INF] Route matched with {action = "UpdateVilla", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] UpdateVilla(Int32, HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:14:53.456 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:14:53.456 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:14:53.456 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:14:53.456 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:14:53.456 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:14:53.456 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:14:53.456 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:14:53.456 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:14:53.456 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:14:53.456 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:14:53.456 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:14:53.456 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:14:53.456 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:14:53.456 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:14:53.456 -03:00 [DBG] Attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' ...
+2022-11-25 11:14:53.457 -03:00 [DBG] Attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' using the name '' in request data ...
+2022-11-25 11:14:53.457 -03:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:14:53.457 -03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:14:53.461 -03:00 [DBG] Done attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:14:53.461 -03:00 [DBG] Done attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:14:53.461 -03:00 [DBG] Attempting to validate the bound parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' ...
+2022-11-25 11:14:53.463 -03:00 [DBG] Done attempting to validate the bound parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:14:53.464 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:14:53.464 -03:00 [DBG] No information found on request to perform content negotiation.
+2022-11-25 11:14:53.464 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:14:53.464 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:14:53.464 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:14:53.464 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:14:53.465 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI) in 9.1895ms
+2022-11-25 11:14:53.465 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:14:53.465 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:14:53.465 -03:00 [DBG] Connection ID "18374686507052040327" disconnecting.
+2022-11-25 11:14:53.465 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44359/api/VillaApi/14 application/json-patch+json 146 - 400 69 application/json;+charset=utf-8 12.0657ms
+2022-11-25 11:15:04.454 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/VillaApi/14 - -
+2022-11-25 11:15:04.454 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:15:04.454 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:15:04.454 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:15:04.454 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:15:04.454 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:15:04.454 -03:00 [INF] Route matched with {action = "GetById", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] GetById(Int32) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:15:04.454 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:15:04.454 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:15:04.454 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:15:04.454 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:15:04.454 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:15:04.454 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:15:04.456 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:15:04.457 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:15:04.457 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:15:04.460 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:15:04.460 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:15:04.464 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:15:04.464 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:15:04.464 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:15:04.467 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:15:04.468 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:15:04.468 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:15:04.468 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:15:04.468 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:15:04.468 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:15:04.468 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:15:04.468 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:15:04.470 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:15:04.472 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:15:04.473 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 2ms reading results.
+2022-11-25 11:15:04.473 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:15:04.473 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:15:04.474 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:15:04.474 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:15:04.474 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:15:04.474 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:15:04.474 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:15:04.474 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:15:04.474 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:15:04.474 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI) in 20.2494ms
+2022-11-25 11:15:04.474 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:15:04.474 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:15:04.475 -03:00 [DBG] Connection ID "18230571297501348056" disconnecting.
+2022-11-25 11:15:04.475 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:15:04.475 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:15:04.475 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi/14 - - - 200 182 application/json;+charset=utf-8 20.9767ms
+2022-11-25 11:16:40.848 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44359/api/VillaApi/14 application/json-patch+json 147
+2022-11-25 11:16:40.850 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:16:40.850 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:16:40.851 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:16:40.851 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:16:40.851 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:16:40.851 -03:00 [INF] Route matched with {action = "UpdateVilla", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] UpdateVilla(Int32, HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:16:40.851 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:16:40.851 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:16:40.851 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:16:40.851 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:16:40.851 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:16:40.851 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:16:40.853 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:16:40.853 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:16:40.853 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:16:40.853 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:16:40.853 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:16:40.853 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:16:40.853 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:16:40.853 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:16:40.853 -03:00 [DBG] Attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' ...
+2022-11-25 11:16:40.854 -03:00 [DBG] Attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' using the name '' in request data ...
+2022-11-25 11:16:40.854 -03:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:16:40.854 -03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:16:40.856 -03:00 [DBG] Done attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:16:40.857 -03:00 [DBG] Done attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:16:40.857 -03:00 [DBG] Attempting to validate the bound parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' ...
+2022-11-25 11:16:40.858 -03:00 [DBG] Done attempting to validate the bound parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:16:40.863 -03:00 [DBG] Context 'ApiVillaContext' started tracking 'Villa' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:16:40.863 -03:00 [DBG] SaveChanges starting for 'ApiVillaContext'.
+2022-11-25 11:16:40.863 -03:00 [DBG] DetectChanges starting for 'ApiVillaContext'.
+2022-11-25 11:16:40.863 -03:00 [DBG] DetectChanges completed for 'ApiVillaContext'.
+2022-11-25 11:16:40.869 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:16:40.869 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:16:40.869 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:16:40.869 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:16:40.869 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:16:40.869 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:16:40.869 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:16:40.869 -03:00 [DBG] Executing DbCommand [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 30), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Villas] SET [Amenity] = @p0, [CreatedDate] = @p1, [Details] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Occupancy] = @p5, [Rate] = @p6, [Sqtf] = @p7, [UpdatedDate] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2022-11-25 11:16:40.883 -03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 30), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Villas] SET [Amenity] = @p0, [CreatedDate] = @p1, [Details] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Occupancy] = @p5, [Rate] = @p6, [Sqtf] = @p7, [UpdatedDate] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2022-11-25 11:16:40.886 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:16:40.886 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 2ms reading results.
+2022-11-25 11:16:40.886 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:16:40.886 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:16:40.886 -03:00 [DBG] An entity of type 'Villa' tracked by 'ApiVillaContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:16:40.886 -03:00 [DBG] SaveChanges completed for 'ApiVillaContext' with 1 entities written to the database.
+2022-11-25 11:16:40.886 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:16:40.886 -03:00 [DBG] No information found on request to perform content negotiation.
+2022-11-25 11:16:40.886 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:16:40.886 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:16:40.886 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:16:40.886 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:16:40.886 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI) in 35.3026ms
+2022-11-25 11:16:40.887 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:16:40.887 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:16:40.887 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:16:40.887 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:16:40.887 -03:00 [DBG] Connection ID "18374686507052040329" disconnecting.
+2022-11-25 11:16:40.887 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44359/api/VillaApi/14 application/json-patch+json 147 - 200 69 application/json;+charset=utf-8 39.7809ms
+2022-11-25 11:17:25.496 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/VillaApi/14 - -
+2022-11-25 11:17:25.496 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:17:25.496 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:17:25.496 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:17:25.496 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:17:25.496 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:17:25.496 -03:00 [INF] Route matched with {action = "GetById", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] GetById(Int32) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:17:25.496 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:17:25.496 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:17:25.496 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:17:25.496 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:17:25.496 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:17:25.496 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:17:25.497 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:17:25.497 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:17:25.497 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:17:25.497 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:17:25.497 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:17:25.497 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:17:25.497 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:17:25.497 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:17:25.497 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:17:25.497 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:17:25.497 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:17:25.497 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:17:25.497 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:17:25.497 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:17:25.497 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:17:25.498 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:17:25.500 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:17:25.502 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:17:25.503 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 2ms reading results.
+2022-11-25 11:17:25.503 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:17:25.504 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (1ms).
+2022-11-25 11:17:25.504 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:17:25.505 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:17:25.505 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:17:25.505 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:17:25.505 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:17:25.505 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:17:25.505 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:17:25.506 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI) in 9.4627ms
+2022-11-25 11:17:25.506 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:17:25.506 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:17:25.506 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:17:25.506 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:17:25.506 -03:00 [DBG] Connection ID "18374686507052040331" disconnecting.
+2022-11-25 11:17:25.506 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi/14 - - - 200 181 application/json;+charset=utf-8 10.2593ms
+2022-11-25 11:17:44.771 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:44359/api/VillaApi/14 application/json-patch+json 146
+2022-11-25 11:17:44.771 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:17:44.771 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:17:44.772 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:17:44.772 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:17:44.772 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:17:44.772 -03:00 [INF] Route matched with {action = "UpdateVilla", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] UpdateVilla(Int32, HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:17:44.772 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:17:44.772 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:17:44.772 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:17:44.772 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:17:44.772 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:17:44.772 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:17:44.772 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:17:44.772 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:17:44.772 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:17:44.772 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:17:44.772 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:17:44.772 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:17:44.772 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:17:44.772 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:17:44.772 -03:00 [DBG] Attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' ...
+2022-11-25 11:17:44.772 -03:00 [DBG] Attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' using the name '' in request data ...
+2022-11-25 11:17:44.772 -03:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:17:44.772 -03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:17:44.772 -03:00 [DBG] Done attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:17:44.773 -03:00 [DBG] Done attempting to bind parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:17:44.773 -03:00 [DBG] Attempting to validate the bound parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO' ...
+2022-11-25 11:17:44.773 -03:00 [DBG] Done attempting to validate the bound parameter 'villaDTO' of type 'HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO'.
+2022-11-25 11:17:44.773 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:17:44.773 -03:00 [DBG] No information found on request to perform content negotiation.
+2022-11-25 11:17:44.773 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:17:44.773 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:17:44.773 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:17:44.773 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:17:44.773 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI) in 1.303ms
+2022-11-25 11:17:44.773 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdateVilla (HotelComercy_WebAPI)'
+2022-11-25 11:17:44.773 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:17:44.773 -03:00 [DBG] Connection ID "18086456122310394063" disconnecting.
+2022-11-25 11:17:44.773 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:44359/api/VillaApi/14 application/json-patch+json 146 - 400 69 application/json;+charset=utf-8 1.9491ms
+2022-11-25 11:18:07.717 -03:00 [INF] Request starting HTTP/2 PATCH https://localhost:44359/api/VillaApi/14 application/json-patch+json 72
+2022-11-25 11:18:07.717 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:18:07.717 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:18:07.717 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI)'
+2022-11-25 11:18:07.717 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:18:07.717 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI)'
+2022-11-25 11:18:07.719 -03:00 [INF] Route matched with {action = "UpdatePatchVilla", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePatchVilla(Int32, Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:18:07.719 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:18:07.719 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:18:07.719 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:18:07.719 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:18:07.719 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:18:07.719 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:18:07.720 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:18:07.720 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:18:07.720 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:18:07.720 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:18:07.720 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:07.720 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:07.720 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:18:07.720 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:07.720 -03:00 [DBG] Attempting to bind parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]' ...
+2022-11-25 11:18:07.720 -03:00 [DBG] Attempting to bind parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]' using the name '' in request data ...
+2022-11-25 11:18:07.720 -03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:18:07.746 -03:00 [DBG] Done attempting to bind parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]'.
+2022-11-25 11:18:07.746 -03:00 [DBG] Done attempting to bind parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]'.
+2022-11-25 11:18:07.746 -03:00 [DBG] Attempting to validate the bound parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]' ...
+2022-11-25 11:18:07.746 -03:00 [DBG] Done attempting to validate the bound parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]'.
+2022-11-25 11:18:07.748 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:18:07.748 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:18:07.748 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:18:07.748 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:07.748 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:07.748 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.748 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.748 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:18:07.760 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:18:07.761 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.761 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 1ms reading results.
+2022-11-25 11:18:07.762 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.762 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:18:07.773 -03:00 [DBG] Context 'ApiVillaContext' started tracking 'Villa' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:18:07.773 -03:00 [DBG] SaveChanges starting for 'ApiVillaContext'.
+2022-11-25 11:18:07.773 -03:00 [DBG] DetectChanges starting for 'ApiVillaContext'.
+2022-11-25 11:18:07.774 -03:00 [DBG] DetectChanges completed for 'ApiVillaContext'.
+2022-11-25 11:18:07.774 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.774 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.774 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:18:07.774 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:07.774 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:07.774 -03:00 [DBG] Executing DbCommand [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 30), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Villas] SET [Amenity] = @p0, [CreatedDate] = @p1, [Details] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Occupancy] = @p5, [Rate] = @p6, [Sqtf] = @p7, [UpdatedDate] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2022-11-25 11:18:07.787 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 30), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Villas] SET [Amenity] = @p0, [CreatedDate] = @p1, [Details] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Occupancy] = @p5, [Rate] = @p6, [Sqtf] = @p7, [UpdatedDate] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2022-11-25 11:18:07.787 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.787 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 0ms reading results.
+2022-11-25 11:18:07.787 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.787 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:18:07.787 -03:00 [DBG] An entity of type 'Villa' tracked by 'ApiVillaContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:18:07.787 -03:00 [DBG] SaveChanges completed for 'ApiVillaContext' with 1 entities written to the database.
+2022-11-25 11:18:07.789 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-11-25 11:18:07.789 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI) in 69.4982ms
+2022-11-25 11:18:07.789 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI)'
+2022-11-25 11:18:07.789 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:18:07.789 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:07.789 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:18:07.789 -03:00 [INF] Request finished HTTP/2 PATCH https://localhost:44359/api/VillaApi/14 application/json-patch+json 72 - 204 - - 72.7072ms
+2022-11-25 11:18:07.789 -03:00 [DBG] Connection ID "18374686507052040333" disconnecting.
+2022-11-25 11:18:17.003 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/VillaApi/14 - -
+2022-11-25 11:18:17.003 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:18:17.003 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:18:17.003 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:18:17.003 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:18:17.003 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:18:17.003 -03:00 [INF] Route matched with {action = "GetById", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] GetById(Int32) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:18:17.003 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:18:17.003 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:18:17.003 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:18:17.003 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:18:17.003 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:18:17.003 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:18:17.004 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:18:17.004 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:18:17.004 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:18:17.004 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:18:17.004 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:17.004 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:17.004 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:18:17.004 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:17.004 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:18:17.004 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:18:17.004 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:18:17.004 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:17.004 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:17.004 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:17.004 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:17.004 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:18:17.005 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:18:17.006 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:17.006 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 0ms reading results.
+2022-11-25 11:18:17.006 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:17.006 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:18:17.007 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:18:17.007 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:18:17.007 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:18:17.007 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:18:17.007 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:18:17.007 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:18:17.007 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:18:17.007 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI) in 3.5288ms
+2022-11-25 11:18:17.007 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:18:17.007 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:18:17.007 -03:00 [DBG] Connection ID "17798225759043584084" disconnecting.
+2022-11-25 11:18:17.007 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:17.007 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:18:17.007 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi/14 - - - 200 181 application/json;+charset=utf-8 4.1259ms
+2022-11-25 11:18:25.452 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/VillaApi/14 - -
+2022-11-25 11:18:25.452 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:18:25.452 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:18:25.452 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:18:25.452 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:18:25.452 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:18:25.452 -03:00 [INF] Route matched with {action = "GetById", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] GetById(Int32) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:18:25.452 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:18:25.452 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:18:25.452 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:18:25.452 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:18:25.452 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:18:25.452 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:18:25.452 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:18:25.453 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:18:25.453 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:18:25.453 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:18:25.453 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:25.453 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:25.453 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:18:25.453 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:25.453 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:18:25.453 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:18:25.453 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:18:25.453 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:25.453 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:25.453 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:25.453 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:25.453 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:18:25.455 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:18:25.456 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:25.456 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 0ms reading results.
+2022-11-25 11:18:25.456 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:25.456 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:18:25.456 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:18:25.456 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:18:25.456 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:18:25.456 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:18:25.456 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:18:25.456 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:18:25.456 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:18:25.456 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI) in 3.8243ms
+2022-11-25 11:18:25.456 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:18:25.456 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:18:25.456 -03:00 [DBG] Connection ID "18374686507052040335" disconnecting.
+2022-11-25 11:18:25.456 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:25.456 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:18:25.456 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi/14 - - - 200 181 application/json;+charset=utf-8 4.4588ms
+2022-11-25 11:18:55.042 -03:00 [INF] Request starting HTTP/2 PATCH https://localhost:44359/api/VillaApi/14 application/json-patch+json 73
+2022-11-25 11:18:55.042 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:18:55.042 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:18:55.042 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI)'
+2022-11-25 11:18:55.042 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:18:55.042 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI)'
+2022-11-25 11:18:55.043 -03:00 [INF] Route matched with {action = "UpdatePatchVilla", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePatchVilla(Int32, Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:18:55.043 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:18:55.043 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:18:55.043 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:18:55.043 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:18:55.043 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:18:55.043 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:18:55.043 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:18:55.043 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:18:55.043 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:18:55.043 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:18:55.043 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:55.044 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:55.044 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:18:55.044 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:18:55.044 -03:00 [DBG] Attempting to bind parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]' ...
+2022-11-25 11:18:55.044 -03:00 [DBG] Attempting to bind parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]' using the name '' in request data ...
+2022-11-25 11:18:55.044 -03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2022-11-25 11:18:55.046 -03:00 [DBG] Done attempting to bind parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]'.
+2022-11-25 11:18:55.047 -03:00 [DBG] Done attempting to bind parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]'.
+2022-11-25 11:18:55.047 -03:00 [DBG] Attempting to validate the bound parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]' ...
+2022-11-25 11:18:55.047 -03:00 [DBG] Done attempting to validate the bound parameter 'doc' of type 'Microsoft.AspNetCore.JsonPatch.JsonPatchDocument`1[HotelComercy_WebAPI.Model.Dto.VillaUpdateDTO]'.
+2022-11-25 11:18:55.050 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:18:55.051 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:18:55.051 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:18:55.051 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:55.051 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:55.051 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.051 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.051 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:18:55.053 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:18:55.053 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.053 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 0ms reading results.
+2022-11-25 11:18:55.053 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.053 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:18:55.054 -03:00 [DBG] Context 'ApiVillaContext' started tracking 'Villa' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:18:55.054 -03:00 [DBG] SaveChanges starting for 'ApiVillaContext'.
+2022-11-25 11:18:55.055 -03:00 [DBG] DetectChanges starting for 'ApiVillaContext'.
+2022-11-25 11:18:55.055 -03:00 [DBG] DetectChanges completed for 'ApiVillaContext'.
+2022-11-25 11:18:55.055 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.055 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.055 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:18:55.055 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:55.055 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:18:55.055 -03:00 [DBG] Executing DbCommand [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 30), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Villas] SET [Amenity] = @p0, [CreatedDate] = @p1, [Details] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Occupancy] = @p5, [Rate] = @p6, [Sqtf] = @p7, [UpdatedDate] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2022-11-25 11:18:55.070 -03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 30), @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Villas] SET [Amenity] = @p0, [CreatedDate] = @p1, [Details] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Occupancy] = @p5, [Rate] = @p6, [Sqtf] = @p7, [UpdatedDate] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2022-11-25 11:18:55.072 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.072 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 1ms reading results.
+2022-11-25 11:18:55.072 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.074 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (2ms).
+2022-11-25 11:18:55.074 -03:00 [DBG] An entity of type 'Villa' tracked by 'ApiVillaContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:18:55.074 -03:00 [DBG] SaveChanges completed for 'ApiVillaContext' with 1 entities written to the database.
+2022-11-25 11:18:55.075 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2022-11-25 11:18:55.076 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI) in 32.0863ms
+2022-11-25 11:18:55.076 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.UpdatePatchVilla (HotelComercy_WebAPI)'
+2022-11-25 11:18:55.077 -03:00 [DBG] Connection ID "18086456122310394065" disconnecting.
+2022-11-25 11:18:55.077 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:18:55.078 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:18:55.078 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:18:55.079 -03:00 [INF] Request finished HTTP/2 PATCH https://localhost:44359/api/VillaApi/14 application/json-patch+json 73 - 204 - - 35.6271ms
+2022-11-25 11:19:01.155 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/VillaApi/14 - -
+2022-11-25 11:19:01.155 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:19:01.155 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:19:01.155 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:19:01.155 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:19:01.155 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:19:01.155 -03:00 [INF] Route matched with {action = "GetById", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] GetById(Int32) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:19:01.155 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:19:01.155 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:19:01.155 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:19:01.155 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:19:01.155 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:19:01.155 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:19:01.155 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:19:01.155 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:19:01.155 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:19:01.155 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:19:01.155 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:19:01.155 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:19:01.155 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:19:01.155 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:19:01.156 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:19:01.156 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:19:01.156 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:19:01.156 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:19:01.156 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:19:01.156 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:01.156 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:01.156 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:19:01.158 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:19:01.158 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:01.158 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 0ms reading results.
+2022-11-25 11:19:01.158 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:01.158 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:19:01.158 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:19:01.158 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:19:01.158 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:19:01.158 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:19:01.158 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:19:01.158 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:19:01.158 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:19:01.159 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI) in 3.6629ms
+2022-11-25 11:19:01.159 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetById (HotelComercy_WebAPI)'
+2022-11-25 11:19:01.159 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:19:01.159 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:01.159 -03:00 [DBG] Connection ID "18302628887244308620" disconnecting.
+2022-11-25 11:19:01.159 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:19:01.159 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi/14 - - - 200 179 application/json;+charset=utf-8 4.3321ms
+2022-11-25 11:19:09.679 -03:00 [INF] Request starting HTTP/2 DELETE https://localhost:44359/api/VillaApi/14 - -
+2022-11-25 11:19:09.679 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi/14'
+2022-11-25 11:19:09.679 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.DeleteVilla (HotelComercy_WebAPI)' with route pattern 'api/VillaApi/{id:int}' is valid for the request path '/api/VillaApi/14'
+2022-11-25 11:19:09.679 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.DeleteVilla (HotelComercy_WebAPI)'
+2022-11-25 11:19:09.679 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:19:09.679 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.DeleteVilla (HotelComercy_WebAPI)'
+2022-11-25 11:19:09.682 -03:00 [INF] Route matched with {action = "DeleteVilla", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] DeleteVilla(Int32) on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:19:09.682 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:19:09.682 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:19:09.682 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:19:09.682 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:19:09.682 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:19:09.682 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:19:09.682 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:19:09.682 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:19:09.682 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:19:09.682 -03:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2022-11-25 11:19:09.682 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:19:09.682 -03:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2022-11-25 11:19:09.682 -03:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2022-11-25 11:19:09.682 -03:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2022-11-25 11:19:09.684 -03:00 [DBG] Compiling query expression: 
+'DbSet<Villa>()
+    .Where(x => x.Id == __id_0)
+    .FirstOrDefault()'
+2022-11-25 11:19:09.687 -03:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Villa>(
+    asyncEnumerable: new SingleQueryingEnumerable<Villa>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Villa.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Villa.Amenity (string) Required, 1], [Property: Villa.CreatedDate (DateTime) Required, 2], [Property: Villa.Details (string) Required, 3], [Property: Villa.ImageUrl (string) Required, 4], [Property: Villa.Name (string) Required MaxLength(30), 5], [Property: Villa.Occupancy (int) Required, 6], [Property: Villa.Rate (double) Required, 7], [Property: Villa.Sqtf (int) Required, 8], [Property: Villa.UpdatedDate (DateTime) Required, 9] }
+            SELECT TOP(1) v.Id, v.Amenity, v.CreatedDate, v.Details, v.ImageUrl, v.Name, v.Occupancy, v.Rate, v.Sqtf, v.UpdatedDate
+            FROM Villas AS v
+            WHERE v.Id == @__id_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Villa>, 
+        HotelComercy_WebAPI.Data.ApiVillaContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2022-11-25 11:19:09.687 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:19:09.687 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:19:09.687 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:19:09.687 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:19:09.687 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:19:09.687 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.688 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.688 -03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:19:09.688 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+WHERE [v].[Id] = @__id_0
+2022-11-25 11:19:09.691 -03:00 [DBG] Context 'ApiVillaContext' started tracking 'Villa' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:19:09.691 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.691 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 2ms reading results.
+2022-11-25 11:19:09.691 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.691 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:19:09.692 -03:00 [DBG] An entity of type 'Villa' tracked by 'ApiVillaContext' changed state from '"Unchanged"' to '"Deleted"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:19:09.694 -03:00 [DBG] SaveChanges starting for 'ApiVillaContext'.
+2022-11-25 11:19:09.694 -03:00 [DBG] DetectChanges starting for 'ApiVillaContext'.
+2022-11-25 11:19:09.694 -03:00 [DBG] DetectChanges completed for 'ApiVillaContext'.
+2022-11-25 11:19:09.697 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.698 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.698 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:19:09.698 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:19:09.698 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:19:09.698 -03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Villas]
+OUTPUT 1
+WHERE [Id] = @p0;
+2022-11-25 11:19:09.713 -03:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Villas]
+OUTPUT 1
+WHERE [Id] = @p0;
+2022-11-25 11:19:09.713 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.714 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 0ms reading results.
+2022-11-25 11:19:09.714 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.714 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:19:09.718 -03:00 [DBG] An entity of type 'Villa' tracked by 'ApiVillaContext' changed state from '"Deleted"' to '"Detached"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-11-25 11:19:09.718 -03:00 [DBG] SaveChanges completed for 'ApiVillaContext' with 1 entities written to the database.
+2022-11-25 11:19:09.718 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:19:09.718 -03:00 [DBG] No information found on request to perform content negotiation.
+2022-11-25 11:19:09.718 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:19:09.718 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:19:09.718 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:19:09.718 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:19:09.718 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.DeleteVilla (HotelComercy_WebAPI) in 36.7032ms
+2022-11-25 11:19:09.718 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.DeleteVilla (HotelComercy_WebAPI)'
+2022-11-25 11:19:09.719 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:19:09.719 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:09.719 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:19:09.719 -03:00 [DBG] Connection ID "18230571297501348058" disconnecting.
+2022-11-25 11:19:09.719 -03:00 [INF] Request finished HTTP/2 DELETE https://localhost:44359/api/VillaApi/14 - - - 200 69 application/json;+charset=utf-8 39.7025ms
+2022-11-25 11:19:46.379 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/api/VillaApi - -
+2022-11-25 11:19:46.380 -03:00 [DBG] 1 candidate(s) found for the request path '/api/VillaApi'
+2022-11-25 11:19:46.380 -03:00 [DBG] Endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI)' with route pattern 'api/VillaApi' is valid for the request path '/api/VillaApi'
+2022-11-25 11:19:46.380 -03:00 [DBG] Request matched endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI)'
+2022-11-25 11:19:46.380 -03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2022-11-25 11:19:46.380 -03:00 [INF] Executing endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI)'
+2022-11-25 11:19:46.380 -03:00 [INF] Route matched with {action = "GetVillas", controller = "VillaApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HotelComercy_WebAPI.Model.ApiResponse]] GetVillas() on controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI).
+2022-11-25 11:19:46.380 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2022-11-25 11:19:46.380 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2022-11-25 11:19:46.380 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2022-11-25 11:19:46.380 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2022-11-25 11:19:46.380 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2022-11-25 11:19:46.380 -03:00 [DBG] Executing controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:19:46.380 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 11:19:46.380 -03:00 [DBG] Executed controller factory for controller HotelComercy_WebAPI.Controllers.VillaApiController (HotelComercy_WebAPI)
+2022-11-25 11:19:46.380 -03:00 [INF] Retornando todas as vilas.
+2022-11-25 11:19:46.380 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 11:19:46.381 -03:00 [DBG] Creating DbConnection.
+2022-11-25 11:19:46.381 -03:00 [DBG] Created DbConnection. (0ms).
+2022-11-25 11:19:46.381 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:19:46.381 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 11:19:46.381 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:46.381 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:46.381 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+2022-11-25 11:19:46.389 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[Id], [v].[Amenity], [v].[CreatedDate], [v].[Details], [v].[ImageUrl], [v].[Name], [v].[Occupancy], [v].[Rate], [v].[Sqtf], [v].[UpdatedDate]
+FROM [Villas] AS [v]
+2022-11-25 11:19:46.389 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:46.389 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 0ms reading results.
+2022-11-25 11:19:46.392 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:46.393 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 11:19:46.394 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2022-11-25 11:19:46.395 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2022-11-25 11:19:46.395 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2022-11-25 11:19:46.395 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-11-25 11:19:46.395 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2022-11-25 11:19:46.395 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-11-25 11:19:46.395 -03:00 [INF] Executing OkObjectResult, writing value of type 'HotelComercy_WebAPI.Model.ApiResponse'.
+2022-11-25 11:19:46.396 -03:00 [INF] Executed action HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI) in 16.3696ms
+2022-11-25 11:19:46.396 -03:00 [INF] Executed endpoint 'HotelComercy_WebAPI.Controllers.VillaApiController.GetVillas (HotelComercy_WebAPI)'
+2022-11-25 11:19:46.396 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 11:19:46.396 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 11:19:46.396 -03:00 [DBG] Connection ID "18302628913014112352" disconnecting.
+2022-11-25 11:19:46.396 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2022-11-25 11:19:46.396 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaApi - - - 200 1696 application/json;+charset=utf-8 16.9722ms

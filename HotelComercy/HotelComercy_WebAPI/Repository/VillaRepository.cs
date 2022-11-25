@@ -11,9 +11,11 @@ namespace HotelComercy_WebAPI.Repository
         {
             _context = context;
         }
-        public void Update(Villa obj)
+        public Villa Update(Villa obj)
         {
+            obj.UpdatedDate = DateTime.Now;
             _context.Villas.Update(obj);
+            return obj;
         }
     }
 }
