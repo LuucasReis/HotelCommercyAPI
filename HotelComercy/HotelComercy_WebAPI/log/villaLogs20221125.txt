@@ -6617,3 +6617,120 @@ FROM [VillasNumber] AS [v]
 2022-11-25 15:22:58.871 -03:00 [DBG] Disposed connection to database '' on server '' (0ms).
 2022-11-25 15:22:58.871 -03:00 [DBG] Connection ID "18374686481282236573" disconnecting.
 2022-11-25 15:22:58.871 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/api/VillaNumberApi - - - 200 122 application/json;+charset=utf-8 4.8559ms
+2022-11-25 15:51:30.260 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2022-11-25 15:51:31.418 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 15:51:31.452 -03:00 [DBG] Creating DbConnection.
+2022-11-25 15:51:31.506 -03:00 [DBG] Created DbConnection. (51ms).
+2022-11-25 15:51:31.516 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:32.879 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:32.887 -03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2022-11-25 15:51:32.899 -03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (8ms).
+2022-11-25 15:51:32.901 -03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (17ms).
+2022-11-25 15:51:32.907 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-25 15:51:32.934 -03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-25 15:51:32.937 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:32.946 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (6ms).
+2022-11-25 15:51:32.950 -03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2022-11-25 15:51:32.950 -03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2022-11-25 15:51:32.950 -03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2022-11-25 15:51:32.950 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:32.951 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:32.952 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-11-25 15:51:32.983 -03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-11-25 15:51:32.983 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:32.984 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 15:51:33.004 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 15:51:33.004 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 15:51:33.004 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 15:51:33.004 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.004 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.005 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-11-25 15:51:33.008 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-11-25 15:51:33.011 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.013 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 3ms reading results.
+2022-11-25 15:51:33.013 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.013 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 15:51:33.075 -03:00 [DBG] Compiling query expression: 
+'DbSet<Villa>()
+    .Any()'
+2022-11-25 15:51:33.330 -03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Villas AS v)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    HotelComercy_WebAPI.Data.ApiVillaContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2022-11-25 15:51:33.364 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 15:51:33.364 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 15:51:33.364 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 15:51:33.364 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.364 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.364 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Villas] AS [v]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-11-25 15:51:33.366 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Villas] AS [v]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-11-25 15:51:33.368 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.368 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 1ms reading results.
+2022-11-25 15:51:33.368 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.368 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 15:51:33.370 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 15:51:33.372 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 15:51:33.373 -03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2022-11-25 15:51:33.443 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-11-25 15:51:33.489 -03:00 [DBG] Hosting starting
+2022-11-25 15:51:33.548 -03:00 [DBG] Loaded hosting startup assembly HotelComercy_WebAPI
+2022-11-25 15:51:33.549 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-11-25 15:51:33.549 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-11-25 15:51:33.550 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-25 15:51:33.608 -03:00 [INF] Hosting environment: Development
+2022-11-25 15:51:33.608 -03:00 [INF] Content root path: C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\
+2022-11-25 15:51:33.608 -03:00 [DBG] Hosting started
+2022-11-25 15:51:33.631 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/swagger/index.html - -
+2022-11-25 15:51:33.659 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-11-25 15:51:33.676 -03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2022-11-25 15:51:33.676 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 15:51:33.855 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2022-11-25 15:51:33.983 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2022-11-25 15:51:33.985 -03:00 [DBG] Connection ID "18158513707758387339" disconnecting.
+2022-11-25 15:51:33.988 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/swagger/index.html - - - 200 - text/html;charset=utf-8 359.3424ms
+2022-11-25 15:51:33.989 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - -
+2022-11-25 15:51:34.001 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/_vs/browserLink - -
+2022-11-25 15:51:34.004 -03:00 [DBG] Connection ID "18230571310386249798" disconnecting.
+2022-11-25 15:51:34.009 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 15.4659ms
+2022-11-25 15:51:34.036 -03:00 [DBG] Connection ID "17870283340196610149" disconnecting.
+2022-11-25 15:51:34.039 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.9086ms
+2022-11-25 15:51:34.099 -03:00 [INF] Request starting HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - -
+2022-11-25 15:51:34.099 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2022-11-25 15:51:34.099 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 15:51:34.250 -03:00 [DBG] Connection ID "18230571323271151764" disconnecting.
+2022-11-25 15:51:34.250 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 151.5276ms
