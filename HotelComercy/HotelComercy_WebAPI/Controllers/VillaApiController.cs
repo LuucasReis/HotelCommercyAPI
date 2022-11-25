@@ -94,6 +94,7 @@ namespace HotelComercy_WebAPI.Controllers
                     ModelState.AddModelError("MatchingError", "Esse nome já existe!!");
                     return BadRequest(ModelState);
                 }
+                
                 if (villaDTO == null)
                 {
                     _apiResponse.StatusCode = HttpStatusCode.BadRequest;
@@ -138,11 +139,8 @@ namespace HotelComercy_WebAPI.Controllers
                 }
                 _unitOfWork.Vila.Remove(villa);
                 await _unitOfWork.SaveAsync();
-
-
-                _apiResponse.StatusCode = HttpStatusCode.NoContent;
-                _apiResponse.IsSucess = true;
-                return Ok(_apiResponse);
+                
+                return NoContent();
             }
             catch (Exception e)
             {
@@ -169,9 +167,7 @@ namespace HotelComercy_WebAPI.Controllers
                 _unitOfWork.Vila.Update(villa);
                 await _unitOfWork.SaveAsync();
 
-                _apiResponse.StatusCode = HttpStatusCode.NoContent;
-                _apiResponse.IsSucess = true;
-                return Ok(_apiResponse);
+                return NoContent();
             }
             catch (Exception e)
             {
