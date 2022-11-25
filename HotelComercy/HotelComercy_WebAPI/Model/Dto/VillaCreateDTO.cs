@@ -2,9 +2,9 @@
 
 namespace HotelComercy_WebAPI.Model.Dto
 {
-    public class VillaDTO
+    public class VillaCreateDTO
     {
-        public int Id { get; set; }
+        
         [Required(ErrorMessage ="O campo {0} é obrigatório!!")]
         [MaxLength(30,ErrorMessage ="O campo {0} deve ter no max {1} caracteres.")]
         public string Name { get; set; }

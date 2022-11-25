@@ -1,3 +1,4 @@
+using HotelComercy_WebAPI;
 using HotelComercy_WebAPI.Data;
 using HotelComercy_WebAPI.Data.SeedingService;
 using HotelComercy_WebAPI.Repository;
@@ -27,6 +28,9 @@ Log.Logger = new LoggerConfiguration().MinimumLevel.Debug()
 builder.Host.UseSerilog();
 //Add UnitOfWork
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+//Adding AutoMapper
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 //Add SeedingService
 builder.Services.AddScoped<ISeedingService, SeedingService>();

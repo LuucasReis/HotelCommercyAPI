@@ -3,6 +3,6 @@
     public interface IUnitOfWork
     {
         public IVillaRepository Vila { get; }
-        void Save();
+        Task SaveAsync();
     }
 }

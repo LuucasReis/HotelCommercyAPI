@@ -4,10 +4,10 @@ namespace HotelComercy_WebAPI.Repository.IRepository
 {
     public interface IRepository<T> where T : class
     {
-        IEnumerable<T> GetAll(Expression<Func<T,bool>>? filter = null, string? includeProperties = null);
-        void Add(T entity);
-        T GetFirstOrDefault(Expression<Func<T,bool>> filter, string? includeProperties = null);
-        T GetById(int id);
+        Task<IEnumerable<T>> GetAllAsync(Expression<Func<T,bool>>? filter = null, string? includeProperties = null);
+        Task AddAsync(T entity);
+        Task<T> GetFirstOrDefaultAsync(Expression<Func<T,bool>> filter, bool tracked = true, string? includeProperties = null);
+        Task<T> GetByIdAsync(int id);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
     }

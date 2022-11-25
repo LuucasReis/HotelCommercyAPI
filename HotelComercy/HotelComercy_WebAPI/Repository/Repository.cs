@@ -15,12 +15,12 @@ namespace HotelComercy_WebAPI.Repository
             _context = context;
             _dbSet = _context.Set<T>();
         }
-        public void Add(T entity)
+        public async Task AddAsync(T entity)
         {
-            _dbSet.Add(entity);
+            await _dbSet.AddAsync(entity);
         }
 
-        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
+        public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
         {
             IQueryable<T> query = _dbSet.AsNoTracking();
             if(filter != null)
@@ -34,18 +34,22 @@ namespace HotelComercy_WebAPI.Repository
                     query = query.Include(property);
                 }
             }
-            return query.ToList();
+            return await query.ToListAsync();
         }
 
-        public T GetById(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
-            T entity = _dbSet.Find(id);
+            T entity = await _dbSet.FindAsync(id);
             return entity;
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public async Task<T> GetFirstOrDefaultAsync(Expression<Func<T, bool>> filter, bool tracked = true, string? includeProperties = null)
         {
             IQueryable<T> query = _dbSet;
+            if(!tracked)
+            {
+                query = query.AsNoTracking();
+            }
             query = query.Where(filter);
             if(includeProperties != null)
             {
@@ -55,7 +59,7 @@ namespace HotelComercy_WebAPI.Repository
                 }
             }
 
-            return query.FirstOrDefault();
+            return await query.FirstOrDefaultAsync();
         }
 
         public void Remove(T entity)

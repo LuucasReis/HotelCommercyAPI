@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "+4mKGhWvkNb+l1qxM54SAOrN2YOENWx3ai9Pz8ufu7PkZ9KnhoAhMQtN1IB5fN8vV2w+OuM5dMP1vXNHI/9zhA==",
+  "dgSpecHash": "l+YzIdm2dPlSoj9gLgdqrSKfveBY/dALa5ysm+KaukUQku6VcFcCSo5jVsietpSpFHIFZ60Za7UYUQ2iWZc4Sw==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucasfernando_frwk\\Documents\\API Village\\HotelComercy\\HotelComercy_WebAPI\\HotelComercy_WebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -13,9 +13,9 @@ namespace HotelComercy_WebAPI.Repository
             _context = context;
             Vila = new VillaRepository(_context);
         }
-        public void Save()
+        public async Task SaveAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }
