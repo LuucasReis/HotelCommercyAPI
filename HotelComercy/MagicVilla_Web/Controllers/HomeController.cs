@@ -1,4 +1,6 @@
-﻿using MagicVilla_Web.Models;
+﻿using AutoMapper;
+using MagicVilla_Web.Models;
+using MagicVilla_Web.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,11 +8,12 @@ namespace MagicVilla_Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IVillaService _villaService;
+        private readonly IMapper _mapper; 
+        public HomeController(IVillaService service,IMapper mapper)
         {
-            _logger = logger;
+            _villaService = service;
+            _mapper = mapper;
         }
 
         public IActionResult Index()

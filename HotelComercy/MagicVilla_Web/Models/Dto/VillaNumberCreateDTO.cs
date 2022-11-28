@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace HotelComercy_WebAPI.Model.Dto
+namespace MagicVilla_Web.Models.Dto
 {
     public class VillaNumberCreateDTO
     {

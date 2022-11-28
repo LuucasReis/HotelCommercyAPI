@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace HotelComercy_WebAPI.Model
+namespace MagicVilla_Web.Models
 {
     public class ApiResponse
     {

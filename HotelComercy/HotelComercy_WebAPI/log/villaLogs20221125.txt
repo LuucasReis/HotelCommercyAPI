@@ -6734,3 +6734,175 @@ END
 2022-11-25 15:51:34.099 -03:00 [DBG] Request did not match any endpoints
 2022-11-25 15:51:34.250 -03:00 [DBG] Connection ID "18230571323271151764" disconnecting.
 2022-11-25 15:51:34.250 -03:00 [INF] Request finished HTTP/2 GET https://localhost:44359/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 151.5276ms
+2022-11-25 16:27:45.537 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2022-11-25 16:27:47.017 -03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApiVillaContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2022-11-25 16:27:47.067 -03:00 [DBG] Creating DbConnection.
+2022-11-25 16:27:47.139 -03:00 [DBG] Created DbConnection. (68ms).
+2022-11-25 16:27:47.150 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.523 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.530 -03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2022-11-25 16:27:48.538 -03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (6ms).
+2022-11-25 16:27:48.540 -03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (12ms).
+2022-11-25 16:27:48.546 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-25 16:27:48.579 -03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-11-25 16:27:48.582 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.593 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (8ms).
+2022-11-25 16:27:48.597 -03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2022-11-25 16:27:48.597 -03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2022-11-25 16:27:48.597 -03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2022-11-25 16:27:48.597 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.599 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.600 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-11-25 16:27:48.619 -03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-11-25 16:27:48.619 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.619 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 16:27:48.639 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 16:27:48.639 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 16:27:48.639 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 16:27:48.639 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.639 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.640 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-11-25 16:27:48.644 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-11-25 16:27:48.647 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.649 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 3ms reading results.
+2022-11-25 16:27:48.649 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.649 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 16:27:48.697 -03:00 [DBG] Compiling query expression: 
+'DbSet<Villa>()
+    .Any()'
+2022-11-25 16:27:48.915 -03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Villas AS v)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    HotelComercy_WebAPI.Data.ApiVillaContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2022-11-25 16:27:48.946 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2022-11-25 16:27:48.946 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 16:27:48.946 -03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2022-11-25 16:27:48.946 -03:00 [DBG] Opening connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.946 -03:00 [DBG] Opened connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.946 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Villas] AS [v]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-11-25 16:27:48.948 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Villas] AS [v]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-11-25 16:27:48.951 -03:00 [DBG] Closing data reader to 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.951 -03:00 [DBG] A data reader for 'ApiVilla' on server 'MAGNATI-10857-F' is being disposed after spending 3ms reading results.
+2022-11-25 16:27:48.951 -03:00 [DBG] Closing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.951 -03:00 [DBG] Closed connection to database 'ApiVilla' on server 'MAGNATI-10857-F' (0ms).
+2022-11-25 16:27:48.953 -03:00 [DBG] 'ApiVillaContext' disposed.
+2022-11-25 16:27:48.955 -03:00 [DBG] Disposing connection to database 'ApiVilla' on server 'MAGNATI-10857-F'.
+2022-11-25 16:27:48.957 -03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2022-11-25 16:27:49.040 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2022-11-25 16:27:49.080 -03:00 [DBG] Hosting starting
+2022-11-25 16:27:49.193 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 0A7A7EC0AC28A36C78BD3723560A359499E447D4)
+2022-11-25 16:27:49.218 -03:00 [INF] Now listening on: https://localhost:7001
+2022-11-25 16:27:49.218 -03:00 [INF] Now listening on: http://localhost:5178
+2022-11-25 16:27:49.218 -03:00 [DBG] Loaded hosting startup assembly HotelComercy_WebAPI
+2022-11-25 16:27:49.218 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-11-25 16:27:49.218 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-11-25 16:27:49.218 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-25 16:27:49.219 -03:00 [INF] Hosting environment: Development
+2022-11-25 16:27:49.219 -03:00 [INF] Content root path: C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\
+2022-11-25 16:27:49.219 -03:00 [DBG] Hosting started
+2022-11-25 16:27:49.478 -03:00 [DBG] Connection id "0HMMF3CHPLGJI" accepted.
+2022-11-25 16:27:49.478 -03:00 [DBG] Connection id "0HMMF3CHPLGJJ" accepted.
+2022-11-25 16:27:49.479 -03:00 [DBG] Connection id "0HMMF3CHPLGJJ" started.
+2022-11-25 16:27:49.479 -03:00 [DBG] Connection id "0HMMF3CHPLGJI" started.
+2022-11-25 16:27:49.495 -03:00 [DBG] Connection id "0HMMF3CHPLGJJ" received FIN.
+2022-11-25 16:27:49.495 -03:00 [DBG] Connection id "0HMMF3CHPLGJI" received FIN.
+2022-11-25 16:27:49.510 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-11-25 16:27:49.510 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-11-25 16:27:49.529 -03:00 [DBG] Connection id "0HMMF3CHPLGJJ" stopped.
+2022-11-25 16:27:49.529 -03:00 [DBG] Connection id "0HMMF3CHPLGJI" stopped.
+2022-11-25 16:27:49.530 -03:00 [DBG] Connection id "0HMMF3CHPLGJI" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-11-25 16:27:49.530 -03:00 [DBG] Connection id "0HMMF3CHPLGJJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-11-25 16:27:49.730 -03:00 [DBG] Connection id "0HMMF3CHPLGJK" accepted.
+2022-11-25 16:27:49.731 -03:00 [DBG] Connection id "0HMMF3CHPLGJK" started.
+2022-11-25 16:27:49.735 -03:00 [DBG] Connection id "0HMMF3CHPLGJL" accepted.
+2022-11-25 16:27:49.735 -03:00 [DBG] Connection id "0HMMF3CHPLGJL" started.
+2022-11-25 16:27:49.769 -03:00 [DBG] Connection id "0HMMF3CHPLGJK" received FIN.
+2022-11-25 16:27:49.775 -03:00 [DBG] Connection 0HMMF3CHPLGJL established using the following protocol: "Tls12"
+2022-11-25 16:27:49.775 -03:00 [DBG] Connection 0HMMF3CHPLGJK established using the following protocol: "Tls12"
+2022-11-25 16:27:49.786 -03:00 [DBG] Connection id "0HMMF3CHPLGJK" is closed. The last processed stream ID was 0.
+2022-11-25 16:27:49.787 -03:00 [DBG] Connection id "0HMMF3CHPLGJK" sending FIN because: "The client closed the connection."
+2022-11-25 16:27:49.790 -03:00 [DBG] Connection id "0HMMF3CHPLGJK" stopped.
+2022-11-25 16:27:49.825 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger - -
+2022-11-25 16:27:49.855 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-11-25 16:27:49.876 -03:00 [DBG] No candidates found for the request path '/swagger'
+2022-11-25 16:27:49.876 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 16:27:49.923 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger - - - 301 0 - 101.7259ms
+2022-11-25 16:27:49.934 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/index.html - -
+2022-11-25 16:27:49.935 -03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2022-11-25 16:27:49.935 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 16:27:50.101 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2022-11-25 16:27:50.203 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2022-11-25 16:27:50.203 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/swagger-ui-bundle.js - -
+2022-11-25 16:27:50.204 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/swagger-ui.css - -
+2022-11-25 16:27:50.204 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/swagger-ui-standalone-preset.js - -
+2022-11-25 16:27:50.204 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - -
+2022-11-25 16:27:50.204 -03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2022-11-25 16:27:50.204 -03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2022-11-25 16:27:50.204 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 16:27:50.204 -03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2022-11-25 16:27:50.204 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 16:27:50.204 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 16:27:50.204 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_vs/browserLink - -
+2022-11-25 16:27:50.205 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/index.html - - - 200 - text/html;charset=utf-8 270.4670ms
+2022-11-25 16:27:50.209 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 5.1056ms
+2022-11-25 16:27:50.238 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-11-25 16:27:50.238 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-11-25 16:27:50.238 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-11-25 16:27:50.238 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/swagger-ui.css - - - 200 143632 text/css 35.0654ms
+2022-11-25 16:27:50.238 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 35.0416ms
+2022-11-25 16:27:50.239 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 35.2222ms
+2022-11-25 16:27:50.243 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.4027ms
+2022-11-25 16:27:50.366 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/v1/swagger.json - -
+2022-11-25 16:27:50.366 -03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2022-11-25 16:27:50.366 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 16:27:50.401 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/swagger/favicon-32x32.png - -
+2022-11-25 16:27:50.401 -03:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2022-11-25 16:27:50.401 -03:00 [DBG] Request did not match any endpoints
+2022-11-25 16:27:50.401 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-11-25 16:27:50.402 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/favicon-32x32.png - - - 200 628 image/png 0.9818ms
+2022-11-25 16:27:50.545 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.8984ms

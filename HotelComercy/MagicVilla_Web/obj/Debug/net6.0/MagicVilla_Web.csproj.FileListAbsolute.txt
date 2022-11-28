@@ -24,3 +24,9 @@ C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\ob
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\obj\Debug\net6.0\MagicVilla_Web.pdb
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\obj\Debug\net6.0\MagicVilla_Web.genruntimeconfig.cache
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\obj\Debug\net6.0\ref\MagicVilla_Web.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Villa_Utility.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Villa_Utility.pdb
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\obj\Debug\net6.0\MagicVilla_Web.csproj.CopyComplete
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Newtonsoft.Json.dll
