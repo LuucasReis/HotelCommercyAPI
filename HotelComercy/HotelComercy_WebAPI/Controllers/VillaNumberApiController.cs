@@ -35,7 +35,7 @@ namespace HotelComercy_WebAPI.Controllers
             try
             {
                 _logger.LogInformation("Retornando todas as VilasNumber.");
-                var villasNumber = await _unityOfWork.VillaNumber.GetAllAsync();
+                var villasNumber = await _unityOfWork.VillaNumber.GetAllAsync(includeProperties:"Villa");
                 _apiResponse.StatusCode = HttpStatusCode.OK;
                 _apiResponse.Result = _mapper.Map<List<VillaNumberDTO>>(villasNumber);
                 return Ok(_apiResponse);

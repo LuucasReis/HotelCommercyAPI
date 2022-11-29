@@ -1,5 +1,4 @@
-﻿@using MagicVilla_Web.Models.Dto
-@using System.Globalization;
+﻿@using System.Globalization;
 @model IEnumerable<VillaDTO>
 <br />
 <div class="container p-4 border">
@@ -18,7 +17,7 @@
                     Nome
                 </th>
                 <th>
-                    Occupancy
+                    Ocupação
                 </th>
                 <th>
                     Preço
@@ -37,11 +36,11 @@
                         @item.Occupancy
                     </td>
                     <td>
-                        @item.Rate.ToString("F2", CultureInfo.InvariantCulture)
+                        R$ @item.Rate.ToString("F2", CultureInfo.InvariantCulture)
                     </td>
                     <td>
-                        <a asp-action="UpdateVilla" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
-                        <a asp-action="DeleteVilla" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                        <a asp-action="UpdateVilla" asp-route-id ="@item.Id" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+                        <a asp-action="DeleteVilla" asp-route-id="@item.Id" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
                     </td>
                 </tr>
             }

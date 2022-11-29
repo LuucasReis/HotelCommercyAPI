@@ -11,9 +11,13 @@ builder.Services.AddControllersWithViews();
 //Adding AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 
-//Adding Service and Http Client to service
+//Adding Villa Service and Http Client to service
 builder.Services.AddHttpClient<IVillaService, VillaService>();
 builder.Services.AddScoped<IVillaService, VillaService>();
+
+//Adding VillaNumber Service and Http Client to service
+builder.Services.AddHttpClient<IVillaNumberService, VillaNumberService>();
+builder.Services.AddScoped<IVillaNumberService, VillaNumberService>();
 
 var app = builder.Build();
 
