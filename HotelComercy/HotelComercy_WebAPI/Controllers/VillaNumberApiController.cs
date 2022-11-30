@@ -96,13 +96,13 @@ namespace HotelComercy_WebAPI.Controllers
             {
                 if (await _unityOfWork.VillaNumber.GetFirstOrDefaultAsync(x => x.VillaNo == villaNumber.VillaNo) != null)
                 {
-                    ModelState.AddModelError("villaNumberErro", "Número da villa já existe!!");
+                    ModelState.AddModelError("ErrorMessages", "Número da villa já existe!!");
                     return BadRequest(ModelState);
                 }
 
                 if (await _unityOfWork.Vila.GetFirstOrDefaultAsync(x => x.Id == villaNumber.VillaId) == null)
                 {
-                    ModelState.AddModelError("villaNumberErro", "Número da villaId não existe!!");
+                    ModelState.AddModelError("ErrorMessages", "Número da villaId não existe!!");
                     return BadRequest(ModelState);
                 }
 
@@ -145,7 +145,7 @@ namespace HotelComercy_WebAPI.Controllers
 
                 if (await _unityOfWork.Vila.GetFirstOrDefaultAsync(x => x.Id == villaNumberUpdate.VillaId) == null)
                 {
-                    ModelState.AddModelError("villaNumberErro", "Número da villaId não existe!!");
+                    ModelState.AddModelError("ErrorMessages", "Número da villaId não existe!!");
                     return BadRequest(ModelState);
                 }
 

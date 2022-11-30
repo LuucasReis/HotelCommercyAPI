@@ -91,7 +91,7 @@ namespace HotelComercy_WebAPI.Controllers
             {
                 if (await _unitOfWork.Vila.GetFirstOrDefaultAsync(x => x.Name == villaDTO.Name) != null)
                 {
-                    ModelState.AddModelError("MatchingError", "Esse nome já existe!!");
+                    ModelState.AddModelError("ErrorMessages", "Esse nome já existe!!");
                     return BadRequest(ModelState);
                 }
                 
