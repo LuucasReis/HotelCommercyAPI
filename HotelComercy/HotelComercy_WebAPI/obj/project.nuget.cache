@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l+YzIdm2dPlSoj9gLgdqrSKfveBY/dALa5ysm+KaukUQku6VcFcCSo5jVsietpSpFHIFZ60Za7UYUQ2iWZc4Sw==",
+  "dgSpecHash": "Otx222S6+cIicHIMsfJCqsnbZlByYlP+Xhkv5VVh8s0HWsbujpQ4Thbqiou1c1kw6as+0AdY0rzXc2iTPdnyag==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucasfernando_frwk\\Documents\\API Village\\HotelComercy\\HotelComercy_WebAPI\\HotelComercy_WebAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.11\\microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.0\\microsoft.aspnetcore.jsonpatch.7.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.11\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.11.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

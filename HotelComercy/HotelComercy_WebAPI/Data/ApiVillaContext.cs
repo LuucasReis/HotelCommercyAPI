@@ -10,6 +10,7 @@ namespace HotelComercy_WebAPI.Data
         }
 
         public DbSet<Villa> Villas { get; set; }
+        public DbSet<LocalUser> LocalUsers { get; set; }
         public DbSet<VillaNumber> VillasNumber { get; set; }
     }
 }

@@ -95,3 +95,4 @@ C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebA
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\bin\Debug\net6.0\Serilog.Sinks.File.dll
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\HotelComercy_WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
