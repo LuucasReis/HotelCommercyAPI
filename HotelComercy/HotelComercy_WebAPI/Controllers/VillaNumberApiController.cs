@@ -4,6 +4,7 @@ using HotelComercy_WebAPI.Model;
 using HotelComercy_WebAPI.Model.Dto;
 using HotelComercy_WebAPI.Repository;
 using HotelComercy_WebAPI.Repository.IRepository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -11,8 +12,10 @@ using System.Net;
 
 namespace HotelComercy_WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/VillaNumberApi")]
     [ApiController]
+    [Authorize]
+    [ApiVersion("1.0")]
     public class VillaNumberApiController : ControllerBase
     {
         private readonly IUnitOfWork _unityOfWork;

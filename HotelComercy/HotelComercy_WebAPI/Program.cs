@@ -4,6 +4,7 @@ using HotelComercy_WebAPI.Data.SeedingService;
 using HotelComercy_WebAPI.Repository;
 using HotelComercy_WebAPI.Repository.IRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -35,20 +36,26 @@ builder.Services.AddSwaggerGen(options =>
     });
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
+{
+    { new OpenApiSecurityScheme
     {
-        {new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id= "Bearer"
-                },
-                Scheme = "oauth2",
-                Name = "Bearer",
-                In = ParameterLocation.Header
-            },
-            new List<string>()
-        }
+        Reference = new OpenApiReference
+        {
+            Type = ReferenceType.SecurityScheme,
+            Id = "Bearer"
+        },
+        Scheme = "oauth2",
+        Name = "Bearer",
+        In = ParameterLocation.Header
+    },
+        new List<string>()
+    }
+});
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "1.0",
+        Title = "Magic Hotel",
+        Description = "Api para manusear o Hotel"
     });
 });
 
@@ -68,6 +75,20 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 //Adding AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingConfig));
+
+//Adding versioning
+builder.Services.AddApiVersioning(options =>
+{
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.ReportApiVersions = true;
+});
+
+builder.Services.AddVersionedApiExplorer(option =>
+{
+    option.GroupNameFormat = "'v'VVV";
+    option.SubstituteApiVersionInUrl = true;
+});
 
 //Adding Authentication
 var key = builder.Configuration.GetValue<string>("ApiSettings:PrivateToken");
@@ -97,7 +118,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "HotelV1");
+    });
 }
 
 app.UseHttpsRedirection();

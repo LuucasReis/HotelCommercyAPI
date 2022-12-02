@@ -76,6 +76,7 @@ namespace HotelComercy_WebAPI.Repository
 
         public async Task<LocalUser> Register(RegistrationRequestDTO registrationRequestDTO)
         {
+            //Daria pra usar um automapper aqui também, mas como é só em um método...
             LocalUser user = new()
             {
                 UserName = registrationRequestDTO.UserName,

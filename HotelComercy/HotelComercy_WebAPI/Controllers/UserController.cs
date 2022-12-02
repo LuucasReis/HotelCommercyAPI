@@ -7,8 +7,9 @@ using System.Net;
 
 namespace HotelComercy_WebAPI.Controllers
 {
-    [Route("api/UserAuth")]
+    [Route("api/v{version:apiVersion}/UserAuth")]
     [ApiController]
+    [ApiVersionNeutral]
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;

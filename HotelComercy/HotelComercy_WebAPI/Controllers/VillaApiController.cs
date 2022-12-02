@@ -10,9 +10,9 @@ using System.Net;
 
 namespace HotelComercy_WebAPI.Controllers
 {
-    [Route("api/VillaApi")]
+    [Route("api/v{version:apiVersion}/VillaApi")]
     [ApiController]
-    [Authorize]
+    [ApiVersion("1.0")]
     public class VillaApiController : ControllerBase
     {
         protected ApiResponse _apiResponse;

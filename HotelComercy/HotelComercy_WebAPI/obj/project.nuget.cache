@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Otx222S6+cIicHIMsfJCqsnbZlByYlP+Xhkv5VVh8s0HWsbujpQ4Thbqiou1c1kw6as+0AdY0rzXc2iTPdnyag==",
+  "dgSpecHash": "xyVGAmFI/jXJsNmWXL0H6TwAmFx9f6lArVFwkgdwpLBVbzMDW+WdX5959PQ+pUBHByyAoZDyUSFc9DOgzgS9SQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucasfernando_frwk\\Documents\\API Village\\HotelComercy\\HotelComercy_WebAPI\\HotelComercy_WebAPI.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.11\\microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.0\\microsoft.aspnetcore.jsonpatch.7.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.11\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.11.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
