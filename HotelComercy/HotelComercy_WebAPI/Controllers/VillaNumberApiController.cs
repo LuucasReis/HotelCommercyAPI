@@ -45,7 +45,6 @@ namespace HotelComercy_WebAPI.Controllers
             }
             catch (Exception e)
             {
-                _apiResponse.IsSucess = false;
                 _apiResponse.ErrorMessages = new List<string> { e.ToString() };
             }
             return _apiResponse;
@@ -63,6 +62,7 @@ namespace HotelComercy_WebAPI.Controllers
                 {
                     _logger.LogError("Requisição de VillaNumber por id 0");
                     _apiResponse.StatusCode = HttpStatusCode.BadRequest;
+                    _apiResponse.IsSucess = false;
                     return BadRequest(_apiResponse);
                 }
 
@@ -70,6 +70,7 @@ namespace HotelComercy_WebAPI.Controllers
                 if (villaNumber == null)
                 {
                     _apiResponse.StatusCode = HttpStatusCode.NotFound;
+                    _apiResponse.IsSucess = false;
                     return NotFound(_apiResponse);
                 }
 

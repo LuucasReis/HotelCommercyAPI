@@ -17,10 +17,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers(options =>
 {
-    //options.ReturnHttpNotAcceptable = true;
+    options.CacheProfiles.Add("Padrao30", new CacheProfile()
+    {
+        Duration = 30
+    });
 }).AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddResponseCaching();
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

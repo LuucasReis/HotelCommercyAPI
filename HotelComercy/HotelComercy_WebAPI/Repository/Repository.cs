@@ -1,4 +1,5 @@
 ﻿using HotelComercy_WebAPI.Data;
+using HotelComercy_WebAPI.Pagination;
 using HotelComercy_WebAPI.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -20,7 +21,7 @@ namespace HotelComercy_WebAPI.Repository
             await _dbSet.AddAsync(entity);
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
+        public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null, DefaultPagination? pagination = null)
         {
             IQueryable<T> query = _dbSet.AsNoTracking();
             if(filter != null)
@@ -33,6 +34,12 @@ namespace HotelComercy_WebAPI.Repository
                 {
                     query = query.Include(property);
                 }
+            }
+
+            if(pagination.PageSize > 0)
+            {
+                pagination.TotalPages = query.Count();
+                query = query.Skip(pagination.PageSize * (pagination.PageNumber - 1)).Take(pagination.PageSize);
             }
             return await query.ToListAsync();
         }

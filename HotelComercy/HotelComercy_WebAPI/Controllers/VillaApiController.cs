@@ -1,12 +1,16 @@
 ﻿using AutoMapper;
 using HotelComercy_WebAPI.Model;
 using HotelComercy_WebAPI.Model.Dto;
+using HotelComercy_WebAPI.Pagination;
 using HotelComercy_WebAPI.Repository.IRepository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.CodeDom.Compiler;
 using System.Net;
+using System.Text.Json;
 
 namespace HotelComercy_WebAPI.Controllers
 {
@@ -29,14 +33,50 @@ namespace HotelComercy_WebAPI.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(CacheProfileName = "Padrao30")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult<ApiResponse>> GetVillas()
+        public async Task<ActionResult<ApiResponse>> GetVillas([FromQuery] int? Occupancy, [FromQuery]string? name, [FromQuery]int? pageNumber
+            ,[FromQuery]int? pageSize)
         {
             try
             {
-                _logger.LogInformation("Retornando todas as vilas.");
-                var villas = await _unitOfWork.Vila.GetAllAsync();
+                IEnumerable<Villa> villas;
+                DefaultPagination defaultPagination = new();
+                if (pageNumber != null && pageSize != null)
+                {
+                    defaultPagination.PageNumber = pageNumber.Value;
+                    defaultPagination.PageSize = pageSize.Value;
+                }
+                if (Occupancy > 0)
+                {
+                    _logger.LogInformation("Retornando vilas com base em um filtro.");
+                    villas = await _unitOfWork.Vila.GetAllAsync(x => x.Occupancy == Occupancy, pagination: defaultPagination);
+
+                }
+                else
+                {
+                    _logger.LogInformation("Retornando todas as vilas.");
+                    villas = await _unitOfWork.Vila.GetAllAsync(pagination: defaultPagination);
+                }
+                
+                if(!string.IsNullOrEmpty(name))
+                {
+                    villas = villas.Where(x=> x.Name.ToLower().Contains(name));
+                }
+                PagedInfo pagedInfo = new PagedInfo(defaultPagination.TotalPages, defaultPagination.PageNumber, defaultPagination.PageSize);
+
+                var metadata = new
+                {
+                    pagedInfo.TotalCount,
+                    defaultPagination.PageSize,
+                    pagedInfo.CurrentPage,
+                    pagedInfo.TotalPages,
+                    pagedInfo.HasNext,
+                    pagedInfo.HasPrevious
+                };
+                
+                Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(metadata));
                 _apiResponse.Result = _mapper.Map<List<VillaDTO>>(villas);
                 _apiResponse.StatusCode = HttpStatusCode.OK;
                 return Ok(_apiResponse);
@@ -99,7 +139,7 @@ namespace HotelComercy_WebAPI.Controllers
                     ModelState.AddModelError("ErrorMessages", "Esse nome já existe!!");
                     return BadRequest(ModelState);
                 }
-                
+
                 if (villaDTO == null)
                 {
                     _apiResponse.StatusCode = HttpStatusCode.BadRequest;
@@ -145,7 +185,7 @@ namespace HotelComercy_WebAPI.Controllers
                 }
                 _unitOfWork.Vila.Remove(villa);
                 await _unitOfWork.SaveAsync();
-                
+
                 return NoContent();
             }
             catch (Exception e)
