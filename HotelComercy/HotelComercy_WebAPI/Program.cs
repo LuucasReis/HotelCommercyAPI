@@ -1,9 +1,11 @@
 using HotelComercy_WebAPI;
 using HotelComercy_WebAPI.Data;
 using HotelComercy_WebAPI.Data.SeedingService;
+using HotelComercy_WebAPI.Model;
 using HotelComercy_WebAPI.Repository;
 using HotelComercy_WebAPI.Repository.IRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -66,6 +68,8 @@ builder.Services.AddSwaggerGen(options =>
 //Add Context
 builder.Services.AddDbContext<ApiVillaContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApiVillaContext>();
 //Add Simple log
 Log.Logger = new LoggerConfiguration().MinimumLevel.Debug()
     .WriteTo.File("log/villaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();

@@ -30,3 +30,8 @@ C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bi
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Villa_Utility.pdb
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\obj\Debug\net6.0\MagicVilla_Web.csproj.CopyComplete
 C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\lucasfernando_frwk\Documents\API Village\HotelComercy\MagicVilla_Web\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

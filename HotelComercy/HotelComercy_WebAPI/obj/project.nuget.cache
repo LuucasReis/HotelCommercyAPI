@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xyVGAmFI/jXJsNmWXL0H6TwAmFx9f6lArVFwkgdwpLBVbzMDW+WdX5959PQ+pUBHByyAoZDyUSFc9DOgzgS9SQ==",
+  "dgSpecHash": "/QfSuIoYtXkuopgJyF6icDzdxgFPEyHU+ECGxLQ36IJ11NCrH9TCKpdyPoYz4hO/3tq/X+UFjeqgvxgjlugCTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucasfernando_frwk\\Documents\\API Village\\HotelComercy\\HotelComercy_WebAPI\\HotelComercy_WebAPI.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,9 @@
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.11\\microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.11\\microsoft.aspnetcore.cryptography.internal.6.0.11.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.11\\microsoft.aspnetcore.cryptography.keyderivation.6.0.11.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.11\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.11.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.0\\microsoft.aspnetcore.jsonpatch.7.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.11\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.11.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
@@ -36,6 +39,8 @@
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.8\\microsoft.extensions.fileproviders.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\3.1.8\\microsoft.extensions.hosting.abstractions.3.1.8.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.11\\microsoft.extensions.identity.core.6.0.11.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.11\\microsoft.extensions.identity.stores.6.0.11.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",

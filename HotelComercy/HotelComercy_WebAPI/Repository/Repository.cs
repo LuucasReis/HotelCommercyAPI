@@ -36,7 +36,7 @@ namespace HotelComercy_WebAPI.Repository
                 }
             }
 
-            if(pagination.PageSize > 0)
+            if(pagination != null && pagination.PageSize > 0)
             {
                 pagination.TotalPages = query.Count();
                 query = query.Skip(pagination.PageSize * (pagination.PageNumber - 1)).Take(pagination.PageSize);

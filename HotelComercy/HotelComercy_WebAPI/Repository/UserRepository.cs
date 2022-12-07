@@ -1,7 +1,10 @@
-﻿using HotelComercy_WebAPI.Data;
+﻿using AutoMapper;
+using HotelComercy_WebAPI.Data;
 using HotelComercy_WebAPI.Model;
 using HotelComercy_WebAPI.Model.Dto;
 using HotelComercy_WebAPI.Repository.IRepository;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -12,17 +15,24 @@ namespace HotelComercy_WebAPI.Repository
     public class UserRepository : IUserRepository
     {
         private readonly ApiVillaContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IMapper _mapper;
         private string _secretKey;
 
-        public UserRepository(ApiVillaContext context, IConfiguration configuration)
+        public UserRepository(ApiVillaContext context, IConfiguration configuration, UserManager<ApplicationUser> userManager
+            , IMapper mapper, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
             _secretKey = configuration.GetValue<string>("ApiSettings:PrivateToken");
+            _userManager = userManager;
+            _mapper = mapper;
+            _roleManager = roleManager;
         }
 
         public bool IsUniqueUser(string username)
         {
-            var user = _context.LocalUsers.FirstOrDefault(x => x.UserName == username);
+            var user = _context.ApplicationUsers.FirstOrDefault(x => x.UserName == username);
             if(user == null)
             {
                 return true;
@@ -32,10 +42,11 @@ namespace HotelComercy_WebAPI.Repository
 
         public async Task<LoginResponseDTO> Login(LoginRequestDTO loginRequestDTO)
         {
-            var user = _context.LocalUsers.FirstOrDefault(x=> x.UserName.ToLower() == loginRequestDTO.UserName.ToLower()
-            && x.Password == loginRequestDTO.Password);
+            var user = _context.ApplicationUsers.FirstOrDefault(x => x.UserName.ToLower() == loginRequestDTO.UserName.ToLower());
 
-            if( user == null )
+            bool isValid = await _userManager.CheckPasswordAsync(user, loginRequestDTO.Password);
+
+            if(user == null || isValid == false)
             {
                 return new LoginResponseDTO()
                 {
@@ -43,6 +54,8 @@ namespace HotelComercy_WebAPI.Repository
                     User = null
                 };
             }
+
+            var roles = await _userManager.GetRolesAsync(user);
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_secretKey);
 
@@ -53,8 +66,9 @@ namespace HotelComercy_WebAPI.Repository
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, user.Id.ToString()),
-                    new Claim(ClaimTypes.Role, user.Role)
+                    new Claim(ClaimTypes.Name, user.UserName.ToString()),
+                    //usando first or default porque só tem uma ROle, se tivesse mais de uma, faria um foreach para adicionar todas
+                    new Claim(ClaimTypes.Role, roles.FirstOrDefault())
                 }),
                 Expires = DateTime.UtcNow.AddDays(1),
                 SigningCredentials = new(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -69,25 +83,44 @@ namespace HotelComercy_WebAPI.Repository
             LoginResponseDTO response = new()
             {
                 Token = tokenHandler.WriteToken(token),
-                User = user
+                User = _mapper.Map<UserDTO>(user),
             };
             return response;
         }
 
-        public async Task<LocalUser> Register(RegistrationRequestDTO registrationRequestDTO)
+        public async Task<UserDTO> Register(RegistrationRequestDTO registrationRequestDTO)
         {
             //Daria pra usar um automapper aqui também, mas como é só em um método...
-            LocalUser user = new()
+            ApplicationUser user = new()
             {
                 UserName = registrationRequestDTO.UserName,
-                Password = registrationRequestDTO.Password,
+                Email = registrationRequestDTO.UserName,
+                NormalizedEmail = registrationRequestDTO.UserName.ToUpper(),
                 Name = registrationRequestDTO.Name,
-                Role = registrationRequestDTO.Role,
             };
-            await _context.LocalUsers.AddAsync(user);
-            await _context.SaveChangesAsync();
-            user.Password = "";
-            return user;
+
+            try
+            {
+                var result = await _userManager.CreateAsync(user, registrationRequestDTO.Password);
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user, "admin");
+                    if(!_roleManager.RoleExistsAsync("admin").GetAwaiter().GetResult())
+                    {
+                        //Geralmente eu Faria isso no Seeding Service, mas como implementei o Identity depois e é para fins de estudo, deixei assim.
+                        await _roleManager.CreateAsync(new IdentityRole("admin"));
+                        await _roleManager.CreateAsync(new IdentityRole("customer"));
+                    }
+                
+                    var userReturn = _context.ApplicationUsers.FirstAsync(x => x.UserName == registrationRequestDTO.UserName);
+                    return _mapper.Map<UserDTO>(userReturn);
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
+            return new UserDTO();
 
         }
     }

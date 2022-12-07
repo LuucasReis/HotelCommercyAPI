@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ktrLwEAobRAHP8jcEL13B51/sCWyzWq+6RhMb+4hj65zmhMTefQ4hd+0CzMgsCA/55ziYeqB+DBhw9yB0mh6yA==",
+  "dgSpecHash": "tmvIMbZW2Gyfj2ULHM3pPKpiaeL/JctToDEUkDH9xJ29QjMGyh0PQlLbYD+4U3gbi0hZ0mj2DWX9jJlP7dUe5Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucasfernando_frwk\\Documents\\API Village\\HotelComercy\\MagicVilla_Web\\MagicVilla_Web.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,14 @@
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.21.0\\microsoft.identitymodel.abstractions.6.21.0.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.21.0\\microsoft.identitymodel.jsonwebtokens.6.21.0.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.identitymodel.logging\\6.21.0\\microsoft.identitymodel.logging.6.21.0.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.21.0\\microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
     "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\lucasfernando_frwk\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
